@@ -8,11 +8,11 @@ pipeline {
    stages {
       stage('BUILD') {
          steps {
-               sh ''' 
-                  cd maven/calculator_app
-                  mvn clean package -Dmaven.test.skip=true
-               '''
+            dir("maven/calculator_app"){
+               sh 'mvn clean package -Dmaven.test.skip=true'
+               
          }
+      }
       }
    
 
