@@ -5,16 +5,16 @@ pipeline {
       maven 'maven-3.9.2'
    }
 
-   stages {
+  stages {
       stage('BUILD') {
          steps {
-            sh '''
-            cd ./maven/calculator_app
-            mvn clean package -Dmaven.test.skip=true
-            '''
-               
+               sh ''' 
+                  cd maven/calculator_app
+                  mvn clean package -Dmaven.test.skip=true
+               '''
          }
       }
+
       
    
 
@@ -44,7 +44,7 @@ pipeline {
         stage ('Deploy-Tomcat') {
             steps {
                 script {
-                    deploy adapters: [tomcat9(credentialsId: 'tomcat-manager', path: '', url: 'http://3.109.153.227:8080/')], 
+                    deploy adapters: [tomcat9(credentialsId: 'tomcat-manager', path: '', url: 'http://15.206.212.32:8080/')], 
                                      contextPath: '/calculator', 
                                      war: 'maven/calculator_app/target/calculator.war'
                 }
