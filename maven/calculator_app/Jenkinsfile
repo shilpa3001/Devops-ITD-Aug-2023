@@ -29,7 +29,7 @@ pipeline {
       stage('Integration TEST') {
          steps {
             dir("maven/calculator_app") {
-               sh 'sudo mvn clean integration-test'
+               sh 'mvn clean integration-test'
             }
          }
       }
