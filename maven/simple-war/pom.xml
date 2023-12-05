@@ -32,7 +32,7 @@
                     <server>tomcat</server>
                     <username>manager</username>
                     <password>password</password>
-                    <path>/calculator</path>
+                    <path>/itdefined-war</path>
                     <update>true</update>
                 </configuration>
             </plugin>
