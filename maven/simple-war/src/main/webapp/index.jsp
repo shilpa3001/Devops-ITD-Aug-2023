@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>itdefined.org!</title>
+<title>web application</title>
 </head>
 <body>
 	<h1>Simple maven war webapp ! poll scm 2nd development</h1>
