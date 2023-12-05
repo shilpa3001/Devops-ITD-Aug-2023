@@ -11,8 +11,7 @@ pipeline {
                 sh '''
                     cd ./maven/simple-war/
                     mvn clean package
-                    // cd ./target
-                  //  ls
+                 
                 '''
             }
         }
