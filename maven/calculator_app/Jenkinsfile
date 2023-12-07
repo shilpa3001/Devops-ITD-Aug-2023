@@ -23,13 +23,13 @@ pipeline {
          }
       }
 
-    //  stage('Integration TEST') {
-    //     steps {
-    //        dir("maven/calculator_app") {
-     //          sh 'sudo mvn clean integration-test'
-     //       }
-     //    }
-    //  }
+      stage('Integration TEST') {
+         steps {
+            dir("maven/calculator_app") {
+               sh 'sudo mvn clean integration-test'
+            }
+        }
+      }
 
       // stage('Deploy Tomcat Using maven plugin') {
       //    steps {
