@@ -8,6 +8,9 @@ spec:
     image: harshajain/ip_app
     ports:
     - containerPort: 80
+    volumeMounts:
+    - name: hostpath-vol
+      path: /app/volume
   volumes:
   - name: hostpath-vol
     hostPath:
