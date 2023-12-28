@@ -17,3 +17,10 @@ spec:
         image: harshajain/ip_app:latest
         ports:
         - containerPort: 8080
+        volumeMounts:
+        - name: pvc-vol
+          mountPath: /app/pvc-volume
+      volumes:
+      - name: pvc-vol
+        persistentVolumeClaim:
+          claimName: my-pvc
