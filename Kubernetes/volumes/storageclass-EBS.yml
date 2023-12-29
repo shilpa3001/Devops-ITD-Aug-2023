@@ -5,7 +5,7 @@ metadata:
 provisioner: kubernetes.io/aws-ebs
 parameters:
   type: gp2
-  iopsPerGB: 10
+  iopsPerGB: "10"
   fstype: ext4
 allowVolumeExpansion: true
 reclaimPolicy: Retain
