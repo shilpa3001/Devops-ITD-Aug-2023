@@ -5,7 +5,6 @@ metadata:
 provisioner: kubernetes.io/aws-ebs
 parameters:
   type: gp2
-  iopsPerGB: "10"
 allowVolumeExpansion: true
 reclaimPolicy: Retain
 mountOptions:
