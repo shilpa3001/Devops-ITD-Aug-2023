@@ -11,6 +11,8 @@ spec:
     resource:
       requests:
         memory: 100Mi
+        cpu: 250m
       limits:
         memory: 150Mi
+        cpu: 500m
   priorityClassName: high-priority
