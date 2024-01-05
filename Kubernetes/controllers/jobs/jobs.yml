@@ -13,4 +13,5 @@ spec:
         - -c
         - "sleep 10; exit 1"
       restartPolicy: Never
-  backoffLimit: 2
+  backoffLimit: 10
+  parallelism: 4
