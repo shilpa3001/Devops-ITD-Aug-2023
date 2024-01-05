@@ -5,18 +5,18 @@ metadata:
 spec:
   schedule: "*/2 * * * *"
   jobTemplate:
-  spec:
-    template:
-      spec:
-        containers:
-        - name: busybox
-          image: busybox
-          command:
-          - /bin/sh
-          - -c
-          - "sleep 10"
-        restartPolicy: Never
-        backoffLimit: 10
-        parallelism: 2
-        completions: 2
-        activeDeadlineSeconds: 5
+    spec:
+      template:
+        spec:
+          containers:
+          - name: busybox
+            image: busybox
+            command:
+            - /bin/sh
+            - -c
+            - "sleep 10"
+          restartPolicy: Never
+          backoffLimit: 10
+          parallelism: 2
+          completions: 2
+          activeDeadlineSeconds: 5
