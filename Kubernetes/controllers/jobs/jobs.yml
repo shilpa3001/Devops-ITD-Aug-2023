@@ -1,12 +1,12 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: pi
+  name: jobs-example
 spec:
   template:
     spec:
       containers:
       - name: busybox
         image: busybox
-        command: ["echo", "K8S Jobs"]
+        command: ["sleep", "20"]
       restartPolicy: Never
