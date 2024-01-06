@@ -10,7 +10,7 @@ spec:
   - host: ingress.example.com
     http:
       paths:
-      - path: /ip
+      - path: /
         pathType: Prefix
         backend:
           service:
