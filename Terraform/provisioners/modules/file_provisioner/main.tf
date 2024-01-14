@@ -1,4 +1,4 @@
-resource "" "name" {
+resource "null_resource" "name" {
     connection {
       type = "ssh"
       host = var.ec2_public_ip
