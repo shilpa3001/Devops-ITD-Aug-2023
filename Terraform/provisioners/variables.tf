@@ -1,6 +1,6 @@
 variable "root_key_name" {
     type = string
-    default = "your-pem"
+    default = "terra-pem"
 }
 
 variable "root_key_path" {
@@ -10,10 +10,10 @@ variable "root_key_path" {
 
 variable "root_sg_name" {
     type = string
-    default = "./keys/terra.pem"
+    default = "terra_sg"
 }
 
 variable "root_instance_type" {
     type = string
-    default = "./keys/terra.pem"
+    default = "t2.micro"
 }
