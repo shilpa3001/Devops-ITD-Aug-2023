@@ -15,3 +15,12 @@ module "create_ec2" {
     pem_key_name = module.create_pem.pem_key
     sg_id = module.create_sg.sg_id
 }
+
+module "file_provisioner" {
+    source = "./modules/file_provisioner"
+    ec2_public_ip = module.create_ec2.public_ip
+    ec2_username = var.root_ec2_username
+    ec2_pem = var.root_key_path
+    source_path = var.root_source_path
+    destination_path = var.root_destination_path
+}
