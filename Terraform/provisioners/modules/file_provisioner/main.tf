@@ -6,6 +6,7 @@ resource "null_resource" "name" {
       private_key = file(var.ec2_pem)
       agent = false
     }
+
     provisioner "file" {
         source = var.source_path
         destination = var.destination_path

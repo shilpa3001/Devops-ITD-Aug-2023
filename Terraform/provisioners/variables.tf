@@ -32,3 +32,12 @@ variable "root_destination_path" {
     type = string
     default = "/home/ubuntu/nginx.conf"
 }
+
+variable "root_inline_commands" {
+    type = list
+    default = [
+        "sudo apt update -y",
+        "sudo apt install -y nginx git jq",
+        "echo 'This is a remote-exec example' > remote-exec.txt"
+    ]
+}
