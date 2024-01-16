@@ -32,3 +32,13 @@ module "remote_exec" {
     ec2_pem = var.root_key_path
     inline_commands = var.root_inline_commands
 }
+
+module "remote_exec_script" {
+    source = "./modules/remote_exec_file"
+    ec2_public_ip = module.create_ec2.public_ip
+    ec2_username = var.root_ec2_username
+    ec2_pem = var.root_key_path
+    source_script = var.root_source_script
+    destination_script = var.root_destination_script
+    inline_script = var.root_inline_script
+}

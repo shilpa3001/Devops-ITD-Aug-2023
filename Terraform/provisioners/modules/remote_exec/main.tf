@@ -1,4 +1,4 @@
-resource "null_resource" "name" {
+resource "null_resource" "remote_commands" {
      connection {
       type = "ssh"
       host = var.ec2_public_ip
