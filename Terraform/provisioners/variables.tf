@@ -36,7 +36,8 @@ variable "root_destination_path" {
 variable "root_inline_commands" {
     type = list
     default = [
-        "sudo apt update -y",
+        "sudo apt update",
+        "sleep 5; echo '----------------- update success'",
         "sudo apt install -y nginx git jq",
         "echo 'This is a remote-exec example' > remote-exec.txt"
     ]
